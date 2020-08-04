@@ -81,7 +81,7 @@ def get_instruc(leg):
                 skip = False
                 curr += " "
 
-        instruc.append(curr)
+        instruc.append({'steps': curr, 'step-dist': step['distance']['text'], 'step-dur': step['duration']['text']})
 
     return instruc[1:]
 
@@ -101,8 +101,4 @@ def do():
         'time': dist_time_there[1],
     }
     
-    # to get json for page:
-    # out_json = do()
-    # return out_json
-
     return out_json
