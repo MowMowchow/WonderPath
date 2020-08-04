@@ -5,9 +5,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def hello():
-    #out_json = do()
-    #return out_json
-    return 'ok!'
+    out_json = do()
+    return out_json
 
 
 if __name__ == "__main__":
