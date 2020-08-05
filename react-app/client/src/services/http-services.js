@@ -1,6 +1,6 @@
 import 'whatwg-fetch';
 import { Component } from 'react';
-const url = 'http://127.0.0.1:5000'; //https://wonderpath-server.herokuapp.com/
+const url = 'https://wonderpath-server.herokuapp.com'; 
 
 class HttpServiceClass extends Component {
 	constructor(props) {
