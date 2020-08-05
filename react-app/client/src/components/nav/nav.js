@@ -6,9 +6,13 @@ class Nav extends Component {
 	render() {
 		return (
 			<nav className="navbar navbar-expand-lg">
-				<a className="navbar-brand" href="#">
-					WonderPath
-				</a>
+				<Link to="/">
+					<p className="nav-item navbar-nav">
+						WonderPath
+					</p>
+
+				</Link>
+
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -23,19 +27,13 @@ class Nav extends Component {
 				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<ul className="navbar-nav">
 						<Link to="/findpath">
-							<a className="nav-link">
-								<li className="nav-item">Find Path</li>
-							</a>
+								<li className="nav-item nav-link">Find Path</li>
 						</Link>
 						<Link to="/about">
-							<a className="nav-link">
-								<li className="nav-item">About</li>
-							</a>
+								<li className="nav-item nav-link">About</li>
 						</Link>
 						<Link to="/signup">
-							<a className="nav-link">
-								<li className="nav-item">Sign Up</li>
-							</a>
+								<li className="nav-item nav-link">Sign Up</li>
 						</Link>
 					</ul>
 				</div>
