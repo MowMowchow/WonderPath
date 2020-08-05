@@ -1,0 +1,116 @@
+/* GENERAL */
+.seperator-rnd {
+    border-top: 2px solid #bbb;
+    border-radius: 30px;
+}
+
+
+/* NARROW BTN */
+.narrow-btn-col {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    margin-top: 15px;
+    min-height: 80px;
+}
+
+.narrow-btn {
+    font-family: montserrat;
+    font-weight: 600;
+    background-color: #2FC6B7;
+    color: white;
+    border-radius:30px;
+    width: 70%;
+    height: 100%;
+    transition: .2s;
+    margin: auto;
+}
+
+.narrow-btn:hover{
+    font-family: montserrat;
+    font-weight: 600;
+    transform: scale(1.06);
+    transition: 0.33s; 
+    color: white;
+}
+
+.narrow-btn:focus, .narrow-btn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+/* NEW DIST FORM */
+.new-dist-form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-content: center;
+}
+
+
+.new-dist-inp {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    border-width: 1.5px;
+    border-radius: 25px;
+    height: 100%;
+}
+
+
+.new-dist-inp:focus, .new-dist-inp:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.new-dist-inp-col {
+    padding-top: .3em;
+    margin-left: 15%;
+
+}
+
+.calc-btn-col {
+    display: flex;
+    justify-content: center;
+}
+
+.calc-btn {
+    font-family: montserrat;
+    font-weight: 600;
+    background-color: #F13031;
+    color: white;
+    border-radius:30px;
+    width: 70%;
+    height: 100%;
+    transition: .2s;
+    margin: auto;
+    min-width: 106px;
+}
+
+.calc-btn:hover{
+    font-family: montserrat;
+    font-weight: 600;
+    transform: scale(1.06);
+    transition: 0.33s; 
+    color: white;
+}
+
+.calc-btn:focus, .calc-btn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* TIME / DIST */
+
+.info-dist-time-col {
+    display: flex;
+    justify-content: center;
+
+}
+
+.info-dist-time {
+    font-family: montserrat;
+    text-align: center;
+    margin-bottom: -3px;
+}

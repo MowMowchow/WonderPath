@@ -81,7 +81,7 @@ def get_instruc(leg):
                 skip = False
                 curr += " "
 
-        instruc.append({'steps': curr, 'step-dist': step['distance']['text'], 'step-dur': step['duration']['text']})
+        instruc.append({'step': curr, 'step_dist': step['distance']['text'], 'step_dur': step['duration']['text']})
 
     return instruc[1:]
 
