@@ -1,0 +1,57 @@
+.navbar { 
+    font-family: montserrat;
+    font-weight: 600;
+    display: flex;
+    background-color: #12142C;
+}
+
+.navbar :hover {
+    color: #F13031 !important;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    color: white;
+}
+
+.navbar-toggler {
+    color: white;
+}
+
+.navbar-nav {
+    width: 28%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: auto;
+}
+
+
+.nav-item {
+    font-size: 18px;
+    color: white;
+}
+
+
+.navbar-collapse {
+    margin: auto;
+}
+
+
+
+@media (max-width:1300px) {
+.navbar-nav {
+    width: 45%;
+}
+}
+  
+@media (max-width:768px) {
+.navbar-nav {
+    margin: auto;
+    text-align: center;
+}
+
+}
+  
+  
