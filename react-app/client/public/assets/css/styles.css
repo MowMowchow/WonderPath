@@ -1,0 +1,26 @@
+.navbar {
+  padding: 6px;
+}
+
+.navbar a:hover {
+  color: #F13031 !important;
+}
+
+.nav-links-col {
+  width: 25%;
+}
+
+@media (max-width:1300px) {
+  .nav-links-col {
+    width: 45%;
+  }
+}
+
+@media (max-width:768px) {
+  .nav-links-col {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+}
+
