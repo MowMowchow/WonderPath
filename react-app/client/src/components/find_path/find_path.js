@@ -9,11 +9,14 @@ class Find_path extends Component {
 		super(props);
     this.state = {
       data: {},
-      stepsthere: []};
+      stepsthere: [],
+      stepsback: []
+    };
 
 		//binds
     this.loadData = this.loadData.bind(this);
-    this.showsteps = this.showsteps.bind(this);
+    this.show_stepsthere = this.show_stepsthere.bind(this);
+    this.show_stepsback = this.show_stepsback.bind(this);
 	}
 
 	componentDidMount(){
@@ -25,16 +28,28 @@ class Find_path extends Component {
 		HttpService.get_instruc().then(data => {
       self.setState({data: data});
       self.setState({stepsthere: data['instruc_there']})
-		}, err => {}).then(oop => {console.log(this.state.stepsthere)});
+      self.setState({stepsback: data['instruc_back']})
+		}, err => {});
 	}
 
 
   narrow = () => {
-    console.log('hihi');
+    console.log('Narrow Btn Works');
   }
 
-  showsteps = () => {
+  calc = () => {
+    console.log('Calc Btn Works');
+  }
+
+  show_stepsthere = (z) => {
     const list = this.state.stepsthere.map((item) => 
+    <Step step={item} />
+    )
+    return(list);
+  }
+
+  show_stepsback = (z) => {
+    const list = this.state.stepsback.map((item) => 
     <Step step={item} />
     )
     return(list);
@@ -45,25 +60,32 @@ class Find_path extends Component {
 		return (
 			<div className="container-fluid">
 				<div className="row">
-          <div className="col-xl-2 col-lg-3 col-md-12">
+          <div className="col-xl-3 col-lg-4 col-md-12 sidebar">
             <div className="row">  {/*narrow button */}
               <div className="col-12 narrow-btn-col">
               <button type="button" className="btn narrow-btn" onClick={this.narrow}>Narrow</button>
               </div>
             </div>
 
-            <div className="row">
+            <div className="row inp-row">
               <form className="new-dist-form">
-              <div className="col-lg-4 col-sm-3 col-md-4 new-dist-inp-col"> {/* new dist inp */}
+              <div className="col-lg-4 col-sm-3 col-md-4 col-4 new-dist-inp-col"> {/* new dist inp */}
                   <input type="text" className="new-dist-inp"/>
               </div>
-              <div className="col-lg-8 col-sm-9 col-md-8 calc-btn-col"> {/* new dist btn */}
-              <button type="button" className="btn calc-btn" onClick={this.narrow}>Calculate New</button>
+              <div className="col-lg-8 col-sm-9 col-md-8 col-8"> {/* new dist btn */}
+                  <input type="text" className="new-address-inp"/>
               </div>
               </form>
             </div>
+            
+            <div className="row">
+              <div className="col-12 calc-btn-col">
+                <button type="button" className="btn calc-btn" onClick={this.calc}>Calculate New</button>
 
-            <hr class="seperator-rnd"/>
+              </div>
+            </div>
+
+            <hr className="seperator-rnd"/>
             
             <div className="row info-dist-time-row">
               <div className="col-2"/>
@@ -76,30 +98,33 @@ class Find_path extends Component {
               <div className="col-2"/>
             </div>
 
-            <hr class="seperator-rnd"/>
+            <hr className="seperator-rnd"/>
     
             <div className="row">
               <div className="col-12">
-                steps there
-                {this.showsteps()}
+                <h1 className="steps-title">Steps There</h1>
+                {this.show_stepsthere()}
               </div>
             </div>
 
-            <hr class="seperator-rnd"/>
+            <hr className="seperator-rnd"/>
             
             <div className="row">
               <div className="col-12">
-                steps back
-
+              <h1 className="steps-title">Steps Back</h1>
+              {this.show_stepsback()}
               </div>
             </div>
 
-
+            <div className="row">
+              <div className="col-12 bottom-spacer"/>
+            </div>
           </div>
 
+        
 
           {/* map */}
-          <div className="col-xl-10 col-lg-9 col-md-12"> 
+          <div className="col-xl-9 col-lg-8 col-md-12"> 
             map
           </div>
 

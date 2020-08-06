@@ -7,25 +7,24 @@ class Step extends Component {
         this.state = {instruc: {}}
     }
 
-
-
-
-
     render() {
         return(
+            <div className="container-fluid">
             <div className="row">
-                <div className="col-12">
+                <div className="col-12 step-text">
                     {this.props.step.step}
                 </div>
             </div>
             
             <div className="row">
-                    <div className="col-2"/>
-                    <div className="col-10">
-                    {this.props.step.step_dist}
+                    <div className="col-12 step-dist">
+                        <div className="step-dist-text">
+                            {this.props.step.step_dist}
+                        </div>
+                        <div className="step-dist-line"/>
                     </div>
             </div>
-            
+            </div>
         );
     }
 

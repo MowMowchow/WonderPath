@@ -1,0 +1,29 @@
+.step-text {
+    font-family: nunito;
+    margin-left: 7px;
+    text-indent: -7px;
+    font-size: 17px;
+}
+
+.step-dist {
+    margin-left: 25px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-family: nunito;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.step-dist-text {
+    flex-grow: 0;
+}
+
+.step-dist-line {
+    margin-top: 10.7px;
+    margin-right: 25px;
+    margin-left: 5px;
+    flex-grow: 1;
+    height: 1px;
+    background-color: #e6e6e6;
+}
