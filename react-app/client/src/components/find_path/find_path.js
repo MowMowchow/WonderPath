@@ -69,11 +69,13 @@ class Find_path extends Component {
 
             <div className="row inp-row">
               <form className="new-dist-form">
-              <div className="col-lg-4 col-sm-3 col-md-4 col-4 new-dist-inp-col"> {/* new dist inp */}
-                  <input type="text" className="new-dist-inp" placeholder="Distance"/>
+              <div className="col-lg-5 col-sm-5 col-md-5 col-4 new-dist-inp-col"> {/* new dist inp */}
+    <label for="dist" className="new-dist-inp-label">{"Distance (km)"}</label>
+                  <input name="dist" type="text" className="new-dist-inp" value={this.state.data.curr_dist}/>
               </div>
-              <div className="col-lg-8 col-sm-9 col-md-8 col-8"> {/* new dist btn */}
-                  <input type="text" className="new-address-inp" placeholder="Address"/>
+              <div className="col-lg-7 col-sm-7 col-md-7 col-8 new-address-inp-col"> {/* new dist btn */}
+                  <label for="address" className="new-address-inp-label">Address</label>
+                  <input name="address" type="text" className="new-address-inp" value={this.state.data.curr_address}/>
               </div>
               </form>
             </div>

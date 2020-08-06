@@ -69,21 +69,39 @@
 
 .new-dist-form {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     align-content: center;
 }
 
+.new-dist-inp-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-.new-dist-inp {
+.new-dist-inp-label, .new-address-inp-label{
+    font-family: montserrat;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: -.5px;
+
+}
+
+
+.new-dist-inp, .new-address-inp {
     width: 100%;
     overflow: hidden;
     margin: auto;
     border-width: 1.5px;
     border-radius: 25px;
-    height: 100%;
+    height: 30%;
     min-height: 47px;
     text-align: center;
+    font-family: nunito;
+    padding: 4px;
+
 }
 
 .new-dist-inp:focus, .new-dist-inp:active {
@@ -93,19 +111,9 @@
 
 
 .new-address-inp-col {
-    margin-left: 15%;
-}
-
-.new-address-inp {
-    width: 100%;
-    overflow: hidden;
-    margin: auto;
-    border-width: 1.5px;
-    border-radius: 25px;
-    height: 100%;
-    min-height: 47px;
-    text-align: center;
-    font-family: nunito;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -114,9 +122,6 @@
     box-shadow: none;
 }
 
-.new-address-inp-col {
-    margin-left: 15%;
-}
 
 .calc-btn-col {
     display: flex;
