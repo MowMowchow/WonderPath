@@ -70,10 +70,10 @@ class Find_path extends Component {
             <div className="row inp-row">
               <form className="new-dist-form">
               <div className="col-lg-4 col-sm-3 col-md-4 col-4 new-dist-inp-col"> {/* new dist inp */}
-                  <input type="text" className="new-dist-inp"/>
+                  <input type="text" className="new-dist-inp" placeholder="Distance"/>
               </div>
               <div className="col-lg-8 col-sm-9 col-md-8 col-8"> {/* new dist btn */}
-                  <input type="text" className="new-address-inp"/>
+                  <input type="text" className="new-address-inp" placeholder="Address"/>
               </div>
               </form>
             </div>
