@@ -4,11 +4,15 @@ import HttpServiceClass from '../../services/http-services';
 import Step from '../steps/steps';
 import Map from '../gmap/gmap';
 import { withScriptjs } from "react-google-maps";
+
 var curr_location;
 var curr_distance;
 var t_curr_address;
-var t_curr_destination;
+var t_curr_destination_lat;
+var t_curr_destination_lng;
+
 let HttpService = new HttpServiceClass();
+
 class FindPath extends Component {
 	constructor(props){
 		super(props);
@@ -28,10 +32,6 @@ class FindPath extends Component {
     this.calc = this.calc.bind(this);
 	}
 
-	// componentDidMount(){
-	// 	this.loadData();
-	// }
-
 	loadData = () => {
     var self = this;
     var temp = {
@@ -45,41 +45,29 @@ class FindPath extends Component {
           stepsback: data['instruc_back'],
           dest_address: data['dest_address'],
           curr_address: data['curr_address'],
-          refreshkey: 1
         });
         t_curr_address = this.state.curr_address;
-        t_curr_destination = this.state.dest_address;
-      // curr_location = this.state.data.curr_address;
-      // curr_destination = this.state.data.dest_address;
+        t_curr_destination_lat = this.state.dest_address.lat;
+        t_curr_destination_lng = this.state.dest_address.lng;
     }, err => {}).then (temp1 => {
       this.redoMap();
-      console.log('MAP REFRESHED');
     });
   }
 
 
-
-
-
-
   sendData = () => {
-      
-        console.log("SENDING DATA");
-        console.log(t_curr_destination);
         console.log(t_curr_address);
         const temp = {
           "curr_location": t_curr_address,
-          //"curr_destination_lat": t_curr_destination[0],
-          //"curr_destination_lng": t_curr_destination[1]
+          "curr_destination_lat": t_curr_destination_lat,
+          "curr_destination_lng": t_curr_destination_lng
         }
-        //console.log(temp);
         return temp;
-      
   }
+
 
   redoMap = () => {
     var MapLoader = withScriptjs(Map);
-
     return (
       <MapLoader
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTcJcpE8loo8Hmel4kVw5hXa8VOv2FLoo"
@@ -97,8 +85,8 @@ class FindPath extends Component {
     console.log('Calc Btn Works');
     event.preventDefault();
     this.loadData();
-    //http func
   }
+
 
   inp_change = (event) => {
     let nam = event.target.name;
@@ -110,12 +98,14 @@ class FindPath extends Component {
     } 
   }
 
+
   show_stepsthere = () => {
     const list = this.state.stepsthere.map((item) => 
     <Step step={item} />
     )
     return(list);
   }
+
 
   show_stepsback = () => {
     const list = this.state.stepsback.map((item) => 
@@ -191,8 +181,6 @@ class FindPath extends Component {
               <div className="col-12 bottom-spacer"/>
             </div>
           </div>
-
-        
 
           {/* map */}
           <div className="col-xl-9 col-lg-8 col-md-12 map-container"> 

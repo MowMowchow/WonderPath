@@ -14,17 +14,12 @@ class Map extends Component {
         this.doMap = this.doMap.bind(this);
     }
     
+
     doMap = () => {
-        console.log('I LIKE CHEESE 123');
         const find_path_temp = new FindPath();
-
         const travel_data = find_path_temp.sendData();
-        console.log(travel_data);
-        const origin = travel_data.curr_location; // travel_data.curr_destination[0]
-        const destination = { lat: 43.56384330990673, lng: -79.74364589999999 };
-
-        // console.log(this.state.origin);
-        // console.log(this.state.destination);
+        const origin = travel_data.curr_location;
+        const destination = {lat: travel_data.curr_destination_lat, lng: travel_data.curr_destination_lng};
         const directionsService = new google.maps.DirectionsService();
         directionsService.route(
             {
@@ -50,8 +45,8 @@ class Map extends Component {
 
     }
 
+
 	render() {
-		//   {this.loadmap()}
 		const GoogleMapExample = withGoogleMap((props) => (
 			<GoogleMap defaultCenter={{ lat: 40.756795, lng: -73.954298 }} defaultZoom={13}>
 				<DirectionsRenderer directions={this.state.directions} />
