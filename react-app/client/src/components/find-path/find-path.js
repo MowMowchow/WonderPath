@@ -1,41 +1,92 @@
 import React, {Component} from 'react';
-import './find_path.css';
-import HttpServiceClass from '..//..//services/http-services';
-import Step from '..//steps/steps';
-import Map from '..//gmap/gmap';
+import './find-path.css';
+import HttpServiceClass from '../../services/http-services';
+import Step from '../steps/steps';
+import Map from '../gmap/gmap';
 import { withScriptjs } from "react-google-maps";
-const MapLoader = withScriptjs(Map);
 var curr_location;
 var curr_distance;
-
+var t_curr_address;
+var t_curr_destination;
 let HttpService = new HttpServiceClass();
-class Find_path extends Component {
+class FindPath extends Component {
 	constructor(props){
 		super(props);
     this.state = {
       data: {},
       stepsthere: [],
       stepsback: [],
+      curr_address: "",
+      dest_address: ""
     };
 
 		//binds
     this.loadData = this.loadData.bind(this);
     this.show_stepsthere = this.show_stepsthere.bind(this);
     this.show_stepsback = this.show_stepsback.bind(this);
+    this.sendData = this.sendData.bind(this);
+    this.calc = this.calc.bind(this);
 	}
 
-	componentDidMount(){
-		this.loadData();
-	}
+	// componentDidMount(){
+	// 	this.loadData();
+	// }
 
 	loadData = () => {
-		var self = this;
-		HttpService.get_instruc().then(data => {
-      self.setState({data: data});
-      self.setState({stepsthere: data['instruc_there']})
-      self.setState({stepsback: data['instruc_back']})
-		}, err => {});
-	}
+    var self = this;
+    var temp = {
+      "curr_location": curr_location,
+      "curr_distance": curr_distance
+    }
+		HttpService.get_instruc2(temp).then(data => {
+      self.setState({
+          data: data,
+          stepsthere: data['instruc_there'], 
+          stepsback: data['instruc_back'],
+          dest_address: data['dest_address'],
+          curr_address: data['curr_address'],
+          refreshkey: 1
+        });
+        t_curr_address = this.state.curr_address;
+        t_curr_destination = this.state.dest_address;
+      // curr_location = this.state.data.curr_address;
+      // curr_destination = this.state.data.dest_address;
+    }, err => {}).then (temp1 => {
+      this.redoMap();
+      console.log('MAP REFRESHED');
+    });
+  }
+
+
+
+
+
+
+  sendData = () => {
+      
+        console.log("SENDING DATA");
+        console.log(t_curr_destination);
+        console.log(t_curr_address);
+        const temp = {
+          "curr_location": t_curr_address,
+          //"curr_destination_lat": t_curr_destination[0],
+          //"curr_destination_lng": t_curr_destination[1]
+        }
+        //console.log(temp);
+        return temp;
+      
+  }
+
+  redoMap = () => {
+    var MapLoader = withScriptjs(Map);
+
+    return (
+      <MapLoader
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTcJcpE8loo8Hmel4kVw5hXa8VOv2FLoo"
+        loadingElement={<div style={{ height: `100%` }}/>}
+      />
+    )
+  }
 
 
   narrow = () => {
@@ -45,7 +96,7 @@ class Find_path extends Component {
   calc = (event) => {
     console.log('Calc Btn Works');
     event.preventDefault();
-    console.log(curr_distance, curr_location);
+    this.loadData();
     //http func
   }
 
@@ -145,10 +196,7 @@ class Find_path extends Component {
 
           {/* map */}
           <div className="col-xl-9 col-lg-8 col-md-12 map-container"> 
-            <MapLoader
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTcJcpE8loo8Hmel4kVw5hXa8VOv2FLoo"
-              loadingElement={<div style={{ height: `100%` }} />}
-            />
+            {this.redoMap()}
           </div>
 
 				</div>
@@ -160,4 +208,4 @@ class Find_path extends Component {
 	}
 }
 
-export default Find_path;
+export default FindPath;

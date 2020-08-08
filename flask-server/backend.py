@@ -98,7 +98,7 @@ def do(address, dist):
         'distance': dist_time_there[0],
         'time': dist_time_there[1],
         'curr_address': address,
-        'dest_address': dest_coor,
+        'dest_address': {'lat':dest_coor[0],'lng':dest_coor[1]},
         'curr_dist': dist
     }
     

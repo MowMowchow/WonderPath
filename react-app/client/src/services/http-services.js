@@ -19,6 +19,23 @@ class HttpServiceClass extends Component {
     }
 
     
+    get_instruc2 = (inp_json) => {
+        var promise = new Promise((resolve, reject) => {
+            fetch(url+"/get-steps", {
+                method: 'POST',
+			    headers: {
+				'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(inp_json)
+
+            }).then((res) => {
+                resolve(res.json());
+            });
+        });
+        return promise;
+    }
+
+    
 }
 
 export default HttpServiceClass;
