@@ -100,7 +100,9 @@ def do():
         'distance': dist_time_there[0],
         'time': dist_time_there[1],
         'curr_address': address,
+        'dest_address': dest_coor,
         'curr_dist': dist
     }
     
     return out_json
+

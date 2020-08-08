@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import './find_path.css';
 import HttpServiceClass from '..//..//services/http-services';
 import Step from '..//steps/steps';
+import Map from '..//gmap/gmap';
+import { withScriptjs } from "react-google-maps";
+const MapLoader = withScriptjs(Map);
 
 let HttpService = new HttpServiceClass();
 class Find_path extends Component {
@@ -55,11 +58,18 @@ class Find_path extends Component {
     return(list);
   }
 
+  // initMap = () => {
+  //   map = new google.maps.Map(document.getElementById("map"), {
+  //     center: { lat: -34.397, lng: 150.644 },
+  //     zoom: 8
+  //   });
+  // }
+
 
 	render() {
 		return (
-			<div className="container-fluid">
-				<div className="row">
+			<div className="container-fluid find_path-container">
+				<div className="row m-0">
           <div className="col-xl-3 col-lg-4 col-md-12 sidebar">
             <div className="row">  {/*narrow button */}
               <div className="col-12 narrow-btn-col">
@@ -70,11 +80,11 @@ class Find_path extends Component {
             <div className="row inp-row">
               <form className="new-dist-form">
               <div className="col-lg-5 col-sm-5 col-md-5 col-4 new-dist-inp-col"> {/* new dist inp */}
-    <label for="dist" className="new-dist-inp-label">{"Distance (km)"}</label>
+                  <label htmlFor="dist" className="new-dist-inp-label">{"Distance (km)"}</label>
                   <input name="dist" type="text" className="new-dist-inp" value={this.state.data.curr_dist}/>
               </div>
               <div className="col-lg-7 col-sm-7 col-md-7 col-8 new-address-inp-col"> {/* new dist btn */}
-                  <label for="address" className="new-address-inp-label">Address</label>
+                  <label htmlFor="address" className="new-address-inp-label">Address</label>
                   <input name="address" type="text" className="new-address-inp" value={this.state.data.curr_address}/>
               </div>
               </form>
@@ -126,8 +136,11 @@ class Find_path extends Component {
         
 
           {/* map */}
-          <div className="col-xl-9 col-lg-8 col-md-12"> 
-            map
+          <div className="col-xl-9 col-lg-8 col-md-12 map-container"> 
+            <MapLoader
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTcJcpE8loo8Hmel4kVw5hXa8VOv2FLoo"
+              loadingElement={<div style={{ height: `100%` }} />}
+            />
           </div>
 
 				</div>

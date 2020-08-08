@@ -5,9 +5,21 @@
 }
 
 .sidebar {
-    max-width: 400px;
+    max-height: calc(100vh - 58.4px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 6px;
+    padding-right: 17px;
 }
 
+.map-container {
+    margin: 0;
+    padding: 0;
+}
+
+.find_path-container {
+    padding-right: 0;
+}
 
 .bottom-spacer {
     margin: 15px;
@@ -31,8 +43,12 @@
     display: flex;
     justify-content: center;
     padding: 5%;
-    margin-top: 15px;
+    margin-top: 10px;
     min-height: 80px;
+}
+
+.narrow-btn-col {
+    margin-bottom: -8px;
 }
 
 .narrow-btn {
@@ -183,3 +199,4 @@
     margin-bottom: 8px;
 }
 
+/* Map Container */
