@@ -5,6 +5,8 @@ import Step from '..//steps/steps';
 import Map from '..//gmap/gmap';
 import { withScriptjs } from "react-google-maps";
 const MapLoader = withScriptjs(Map);
+var curr_location;
+var curr_distance;
 
 let HttpService = new HttpServiceClass();
 class Find_path extends Component {
@@ -13,7 +15,7 @@ class Find_path extends Component {
     this.state = {
       data: {},
       stepsthere: [],
-      stepsback: []
+      stepsback: [],
     };
 
 		//binds
@@ -40,30 +42,36 @@ class Find_path extends Component {
     console.log('Narrow Btn Works');
   }
 
-  calc = () => {
+  calc = (event) => {
     console.log('Calc Btn Works');
+    event.preventDefault();
+    console.log(curr_distance, curr_location);
+    //http func
   }
 
-  show_stepsthere = (z) => {
+  inp_change = (event) => {
+    let nam = event.target.name;
+    let val = event.target.value;
+    if (nam === "curr_location"){
+      curr_location = val;
+    } else if (nam === "curr_distance") {
+      curr_distance = val;
+    } 
+  }
+
+  show_stepsthere = () => {
     const list = this.state.stepsthere.map((item) => 
     <Step step={item} />
     )
     return(list);
   }
 
-  show_stepsback = (z) => {
+  show_stepsback = () => {
     const list = this.state.stepsback.map((item) => 
     <Step step={item} />
     )
     return(list);
   }
-
-  // initMap = () => {
-  //   map = new google.maps.Map(document.getElementById("map"), {
-  //     center: { lat: -34.397, lng: 150.644 },
-  //     zoom: 8
-  //   });
-  // }
 
 
 	render() {
@@ -76,27 +84,27 @@ class Find_path extends Component {
               <button type="button" className="btn narrow-btn" onClick={this.narrow}>Narrow</button>
               </div>
             </div>
-
-            <div className="row inp-row">
-              <form className="new-dist-form">
-              <div className="col-lg-5 col-sm-5 col-md-5 col-4 new-dist-inp-col"> {/* new dist inp */}
-                  <label htmlFor="dist" className="new-dist-inp-label">{"Distance (km)"}</label>
-                  <input name="dist" type="text" className="new-dist-inp" value={this.state.data.curr_dist}/>
+            <form className="new-dist-form" onSubmit={this.calc}>
+              <div className="row inp-row">
+                
+                <div className="col-lg-5 col-sm-5 col-md-5 col-4 new-dist-inp-col"> {/* new dist inp */}
+                    <label htmlFor="curr_distance" className="new-dist-inp-label">{"Distance (km)"}</label>
+                    <input name="curr_distance" type="text" className="new-dist-inp" onChange={this.inp_change}/>
+                </div>
+                <div className="col-lg-7 col-sm-7 col-md-7 col-8 new-address-inp-col"> {/* new dist btn */}
+                    <label htmlFor="curr_location" className="new-address-inp-label">Address</label>
+                    <input name="curr_location" type="text" className="new-address-inp" onChange={this.inp_change}/>
+                </div>
+              
               </div>
-              <div className="col-lg-7 col-sm-7 col-md-7 col-8 new-address-inp-col"> {/* new dist btn */}
-                  <label htmlFor="address" className="new-address-inp-label">Address</label>
-                  <input name="address" type="text" className="new-address-inp" value={this.state.data.curr_address}/>
-              </div>
-              </form>
-            </div>
-            
-            <div className="row">
-              <div className="col-12 calc-btn-col">
-                <button type="button" className="btn calc-btn" onClick={this.calc}>Calculate New</button>
+              
+              <div className="row calc-btn-row">
+                <div className="col-12 calc-btn-col">
+                  <button type="submit" className="btn calc-btn" onClick={this.calc}>Calculate New</button>
 
+                </div>
               </div>
-            </div>
-
+            </form>
             <hr className="seperator-rnd"/>
             
             <div className="row info-dist-time-row">

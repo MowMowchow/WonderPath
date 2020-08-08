@@ -20,10 +20,20 @@ def _corsify_actual_response(response):
     return response
 
 @app.route("/", methods=['GET', 'POST'])
-def hello():
-    out_json = do()
+def send_data():
+    temp1 = "3915 Tacc Drive, Mississauga, Ontario"
+    temp2 = 2
+    out_json = do(temp1, temp2)
     return _corsify_actual_response(jsonify(out_json))
 
+
+@app.route("/get-steps", methods=['GET', 'POST'])
+def get_steps():
+    dat = request.get_json(silent=True)
+    loc = dat["curr_location"]
+    dist = float(dat["curr_distance"])
+    out_json = do(loc, dist)
+    return _corsify_actual_response(jsonify(out_json))
 
 if __name__ == "__main__":
     app.run()   

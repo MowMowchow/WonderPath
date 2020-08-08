@@ -1,7 +1,5 @@
 import requests, json, math
 api_key = "AIzaSyBTcJcpE8loo8Hmel4kVw5hXa8VOv2FLoo"
-address = "3915 Tacc Drive, Mississauga, Ontario"
-dist = 2
 
 def get_coor(): # is not precise
     base_url = "https://www.googleapis.com/geolocation/v1/geolocate?key="
@@ -86,7 +84,7 @@ def get_instruc(leg):
     return instruc[1:]
 
 
-def do():
+def do(address, dist):
     curr_coor = get_coor_addy(address)
     dest_coor = find_dest_coor(curr_coor['lat'], curr_coor['lng'], dist, 0)
     leg_there = get_legs(curr_coor['lat'], curr_coor['lng'], dest_coor[0], dest_coor[1])
