@@ -35,7 +35,9 @@
     .new-dist-inp {
         max-width: 200px;
     }
-
+    .find_path-container{
+        padding-left: 0 !important;
+    }
 }
 
 /* NARROW BTN */
