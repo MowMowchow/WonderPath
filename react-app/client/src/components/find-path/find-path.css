@@ -27,7 +27,10 @@
 
 @media (max-width: 990px){
     .sidebar {
+        max-height: none;
         max-width: 100%;
+        overflow-y: visible;
+        overflow-x: hidden;
     }
     .narrow-btn, .calc-btn {
         max-width: 300px;
@@ -38,6 +41,7 @@
     .find_path-container{
         padding-left: 0 !important;
     }
+    
 }
 
 /* NARROW BTN */
