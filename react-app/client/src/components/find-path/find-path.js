@@ -7,9 +7,10 @@ import { withScriptjs } from "react-google-maps";
 
 var curr_location;
 var curr_distance;
-var t_curr_address;
 var t_curr_destination_lat;
 var t_curr_destination_lng;
+var t_curr_location_lat;
+var t_curr_location_lng;
 
 let HttpService = new HttpServiceClass();
 
@@ -30,6 +31,7 @@ class FindPath extends Component {
     this.show_stepsback = this.show_stepsback.bind(this);
     this.sendData = this.sendData.bind(this);
     this.calc = this.calc.bind(this);
+    this.redoMap = this.redoMap.bind(this);
 	}
 
 	loadData = () => {
@@ -46,9 +48,11 @@ class FindPath extends Component {
           dest_address: data['dest_address'],
           curr_address: data['curr_address'],
         });
-        t_curr_address = this.state.curr_address;
+        t_curr_location_lat = this.state.curr_address.lat;
+        t_curr_location_lng = this.state.curr_address.lng;
         t_curr_destination_lat = this.state.dest_address.lat;
         t_curr_destination_lng = this.state.dest_address.lng;
+        
     }, err => {}).then (temp1 => {
       this.redoMap();
     });
@@ -56,9 +60,9 @@ class FindPath extends Component {
 
 
   sendData = () => {
-        console.log(t_curr_address);
         const temp = {
-          "curr_location": t_curr_address,
+          "curr_location_lat": t_curr_location_lat,
+          "curr_location_lng": t_curr_location_lng,
           "curr_destination_lat": t_curr_destination_lat,
           "curr_destination_lng": t_curr_destination_lng
         }
