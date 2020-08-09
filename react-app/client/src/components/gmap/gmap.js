@@ -19,9 +19,7 @@ class Map extends Component {
         const find_path_temp = new FindPath();
         const travel_data = find_path_temp.sendData();
         const origin = {lat: travel_data.curr_location_lat, lng: travel_data.curr_location_lng}
-        //const origin = "3915 tacc drive, mississauga"
         const destination = {lat: travel_data.curr_destination_lat, lng: travel_data.curr_destination_lng};
-        //const destination = {lat: 43.56384330990673, lng: -79.74364589999999};
         const directionsService = new google.maps.DirectionsService();
         directionsService.route(
             {
@@ -44,7 +42,6 @@ class Map extends Component {
 
 	componentDidMount() {
         this.doMap()
-
     }
 
 
