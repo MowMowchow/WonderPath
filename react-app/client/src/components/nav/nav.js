@@ -18,7 +18,7 @@ class Nav extends Component {
 		return (
 			<nav className={this.state.urlloc === 'http://localhost:3000/#/' ? "navbar navbar-expand-lg" : "navbar navbar-expand-lg navbar-og"} id="mNavbar">
 				{/* <Link to="/ref" onClick={() => this.checkroute('http://localhost:3000/#/ref')}> */}
-					<a className="nav-logo navbar-nav" href="http://localhost:3000">
+					<a className="nav-logo" href="http://localhost:3000">
 						WonderPath
 					</a>
 

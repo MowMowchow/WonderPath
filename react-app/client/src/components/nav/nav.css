@@ -46,6 +46,10 @@
     font-size: 18px;
     color: white;
     width: 12%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: auto;
 }
 
 .nav-item {
@@ -63,6 +67,10 @@
 @media (max-width:1300px) {
 .navbar-nav {
     width: 45%;
+}
+.nav-logo {
+    width: 12%;
+    margin: auto;
 }
 }
   
