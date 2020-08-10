@@ -2,7 +2,21 @@
     font-family: montserrat;
     font-weight: 600;
     display: flex;
-    background-color: #12142C;
+    background: none;
+    /* background-color: #12142C; */
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-fixed-top {
+    background: #12142C;
+}
+
+.navbar-og {
+    background: #12142C !important;
+    position: relative !important;
+
 }
 
 .navbar :hover {
@@ -20,13 +34,19 @@
 }
 
 .navbar-nav {
-    width: 28%;
+    width: 33%;
     display: flex;
     justify-content: space-around;
     list-style: none;
     margin-left: auto;
 }
 
+
+.nav-logo {
+    font-size: 18px;
+    color: white;
+    width: 12%;
+}
 
 .nav-item {
     font-size: 18px;
@@ -53,5 +73,4 @@
 }
 
 }
-  
   

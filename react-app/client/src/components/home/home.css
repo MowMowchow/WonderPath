@@ -1,0 +1,10 @@
+.particle-row {
+    padding: 0;
+    margin-top: -58.4px;
+}
+
+#particles-js {
+	background: #12142C;
+	height: 220vh;/* calc(100vh - 58.4px); */
+}
+

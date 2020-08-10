@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "mongodb": "^3.5.9",
     "mongoose": "^5.9.23",
+    "particles.js": "^2.0.0",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^5.2.0",
     "whatwg-fetch": "^3.2.0"
