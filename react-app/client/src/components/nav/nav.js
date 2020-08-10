@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
-
+const base_url = 'https://wonderpath.herokuapp.com'
 class Nav extends Component {
 	constructor(props) {
 		super(props);
@@ -16,9 +16,9 @@ class Nav extends Component {
 	render() {
 		
 		return (
-			<nav className={this.state.urlloc === 'http://localhost:3000/#/' ? "navbar navbar-expand-lg" : "navbar navbar-expand-lg navbar-og"} id="mNavbar">
+			<nav className={this.state.urlloc === base_url+'/#/' ? "navbar navbar-expand-lg" : "navbar navbar-expand-lg navbar-og"} id="mNavbar">
 				{/* <Link to="/ref" onClick={() => this.checkroute('http://localhost:3000/#/ref')}> */}
-					<a className="nav-logo" href="http://localhost:3000">
+					<a className="nav-logo" href={base_url}>
 						WonderPath
 					</a>
 
