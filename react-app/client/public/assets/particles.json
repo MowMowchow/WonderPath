@@ -1,10 +1,10 @@
 {
     "particles":{
       "number":{
-        "value":100
+        "value":75
       },
       "color":{
-        "value":"#FFFFFF"
+        "value":["#FFFFFF", "#F5D547", "#2FC6B7", "#EF8354", "#F13031"]
       },
       "shape":{
         "type":"circle",
@@ -49,11 +49,11 @@
       "events":{
         "onhover":{
           "enable":true,
-          "mode":"repulse"
+          "mode":"grab"
         },
         "onclick":{
           "enable": true,
-          "mode":"push"
+          "mode":"repulse"
         }
       },
       "modes":{
@@ -64,6 +64,10 @@
         "bubble":{
           "distance":100,
           "size":10
+        },
+        "grab":{
+          "distance":150,
+          "line_linked.opacity": 1.0
         }
       }
     }

@@ -26,11 +26,11 @@
 
 .navbar-brand {
     font-size: 18px;
-    color: white;
+    color: #FFFFFF;
 }
 
 .navbar-toggler {
-    color: white;
+    color: #FFFFFF;
 }
 
 .navbar-nav {
@@ -44,7 +44,7 @@
 
 .nav-logo {
     font-size: 18px;
-    color: white;
+    color: #FFFFFF;
     width: 12%;
     display: flex;
     justify-content: space-around;
@@ -54,7 +54,7 @@
 
 .nav-item {
     font-size: 18px;
-    color: white;
+    color: #FFFFFF;
 }
 
 

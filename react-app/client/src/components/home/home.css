@@ -1,10 +1,147 @@
 .particle-row {
-    padding: 0;
-    margin-top: -58.4px;
+	padding: 0;
+	margin-top: -58.4px;
 }
 
 #particles-js {
-	background: #12142C;
-	height: 220vh;/* calc(100vh - 58.4px); */
+	background: #12142c;
+	height: 100vh; /* calc(100vh - 58.4px); */
 }
 
+/* HERO SECTION 1 */
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.hero-container {
+	position: absolute;
+	padding-top: 58.4px;
+	background: none;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	top: 12%;
+}
+
+.logo-row {
+	display: flex;
+	justify-content: center;
+	padding-left: 70px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.slogan-col,
+.logo-col {
+	color: #ffffff;
+	width: 100%;
+}
+
+.slogan-row-bottom,
+.slogan-row-top {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.logo-pic {
+	width: 85%;
+	height: auto;
+	float: right;
+}
+
+.slogan-col {
+	width: 80%;
+	padding-top: 8.5vw;
+	padding-right: 0;
+}
+
+.slogan-row-col,
+.slogan-bottom-col {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.slogan-col-top {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.slogan-top-text,
+.slogan-bottom-text {
+	width: 100%;
+	font-family: montserrat;
+	font-weight: 600;
+	/* font-size: 4.5rem; */
+	font-size: 4vw;
+	display: inline;
+}
+
+.slogan-row-bottom {
+	margin-top: 28px;
+}
+
+@media (max-width: 1400px) {
+	.slogan-col {
+		padding-top: 9vw;
+	}
+}
+
+@media (max-width: 990px) {
+	.logo-row {
+		padding: 0;
+		flex-direction: column;
+	}
+	.logo-pic {
+		width: 45%;
+		height: auto;
+	}
+	.logo-col {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slogan-col {
+		padding-left: 0;
+		display: inline;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+	}
+
+	.slogan-top-text,
+	.slogan-bottom-text {
+		font-size: 5.5vw;
+	}
+}
+
+@media (max-width: 576px) {
+	.logo-pic {
+		width: 65%;
+		height: auto;
+	}
+	.slogan-top-text,
+	.slogan-bottom-text {
+		font-size: 7vw;
+	}
+}
+
+@media (max-aspect-ratio: 11/10) {
+	.hero-container {
+		top: 23.5%;
+	}
+}
+
+@media (max-aspect-ratio: 11/15) {
+	.hero-container {
+		top: 22%;
+	}
+}
+
+@media (max-aspect-ratio: 11/17) {
+	.hero-container {
+		top: 27%;
+	}
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
-const base_url = 'https://wonderpath.herokuapp.com'
+const base_url = 'http://localhost:3000'
 class Nav extends Component {
 	constructor(props) {
 		super(props);
