@@ -19,11 +19,6 @@
 
 }
 
-.navbar :hover {
-    color: #F13031 !important;
-    text-decoration: none;
-}
-
 .navbar-brand {
     font-size: 18px;
     color: #FFFFFF;
@@ -41,8 +36,14 @@
     margin-left: auto;
 }
 
-
 .nav-logo {
+    line-height: 0;
+    font-size: 25px;
+    /* float: right; */
+    text-align: left;
+}
+
+.nav-logo-text {
     font-size: 18px;
     color: #FFFFFF;
     width: 12%;
@@ -68,7 +69,7 @@
 .navbar-nav {
     width: 45%;
 }
-.nav-logo {
+.nav-logo-text {
     width: 12%;
     margin: auto;
 }
@@ -82,3 +83,13 @@
 
 }
   
+.navbar a {
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    transform: scale(1.15);
+    transition: 0.33s;
+    text-decoration: none;
+    color: #FFFFFF !important;
+}
