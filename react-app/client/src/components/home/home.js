@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './home.css';
 import '../../wonderpath_icon/style.css';
+import guy_with_map from './guy_with_map_2.png';
+
 var ReactRotatingText = require('react-rotating-text');
 
 class Home extends Component {
@@ -31,6 +33,53 @@ class Home extends Component {
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+
+				{/* Section 2 */}
+
+				<div className="sec-2-container">
+					<div className="row sec-2-row">
+						<div className="col-xl-7 col-lg-6 sec-2-col-left">
+							<div className="sec-2-header-block">
+								<h1 className="sec-2-header">Routes Made Easy</h1>
+								<p className="sec-2-header-text">WonderPath plans your route so you don't have to</p>
+							</div>
+							<div className="info-block">
+								<h2 className="info-block-header">Customizable Direction and Distance</h2>
+								<p className="info-block-text">
+									WonderPath's dynamic path generation algorithm allows the user to dictate both the
+									direction and distance of their route
+								</p>
+							</div>
+
+							<div className="info-block">
+								<h2 className="info-block-header">Totally Free</h2>
+								<p className="info-block-text">
+									We believe everyone should be able to enjoy the outdoors free of charge
+								</p>
+							</div>
+
+							<div className="info-block">
+								<h2 className="info-block-header">Save and Share You Paths With Others</h2>
+								<p className="info-block-text">
+									Sign up for a free WonderPath account to save your favourite routes and share them
+									with your friends
+								</p>
+							</div>
+						</div>
+						<div className="col-xl-5 col-lg-6 sec-2-col-right">
+							<img className="sec-2-img" src={guy_with_map} alt="hahaa" />
+						</div>
+					</div>
+				</div>
+
+				{/*Section 3 */}
+
+				<div className="sec-3-container">
+					<div className="row sec-3-row">
+						<div className="col-5 sec-3-col-left">hi</div>
+						<div className="col-7 sec-3-col-right">bye</div>
 					</div>
 				</div>
 			</div>
