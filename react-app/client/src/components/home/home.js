@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './home.css';
 import '../../wonderpath_icon/style.css';
 import guy_with_map from './guy_with_map_2.png';
+import free_icon from './free_icon.png';
+import multiarrow_icon from './multiarrow_icon.png';
+import share_icon from './share_icon.png';
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -45,27 +48,34 @@ class Home extends Component {
 								<h1 className="sec-2-header">Routes Made Easy</h1>
 								<p className="sec-2-header-text">WonderPath plans your route so you don't have to</p>
 							</div>
-							<div className="info-block">
-								<h2 className="info-block-header">Customizable Direction and Distance</h2>
-								<p className="info-block-text">
-									WonderPath's dynamic path generation algorithm allows the user to dictate both the
-									direction and distance of their route
-								</p>
+							<div className="info-block-all">
+								<img className="info-icon" src={multiarrow_icon} alt="wasd" />
+								<div className="info-block">
+									<h2 className="info-block-header">Customizable Direction and Distance</h2>
+									<p className="info-block-text">
+										WonderPath's dynamic path generation algorithm allows the user to dictate both
+										the direction and distance of their route
+									</p>
+								</div>
 							</div>
-
-							<div className="info-block">
-								<h2 className="info-block-header">Totally Free</h2>
-								<p className="info-block-text">
-									We believe everyone should be able to enjoy the outdoors free of charge
-								</p>
+							<div className="info-block-all">
+								<img className="info-icon" src={free_icon} alt="wasd" />
+								<div className="info-block">
+									<h2 className="info-block-header">Totally Free</h2>
+									<p className="info-block-text">
+										We believe everyone should be able to enjoy the outdoors free of charge
+									</p>
+								</div>
 							</div>
-
-							<div className="info-block">
-								<h2 className="info-block-header">Save and Share You Paths With Others</h2>
-								<p className="info-block-text">
-									Sign up for a free WonderPath account to save your favourite routes and share them
-									with your friends
-								</p>
+							<div className="info-block-all">
+								<img className="info-icon" src={share_icon} alt="wasd" />
+								<div className="info-block">
+									<h2 className="info-block-header">Save and Share You Paths With Others</h2>
+									<p className="info-block-text">
+										Sign up for a free WonderPath account to save your favourite routes and share
+										them with your friends
+									</p>
+								</div>
 							</div>
 						</div>
 						<div className="col-xl-5 col-lg-6 sec-2-col-right">
