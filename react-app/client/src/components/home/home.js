@@ -5,6 +5,7 @@ import guy_with_map from './guy_with_map_2.png';
 import free_icon from './free_icon.png';
 import multiarrow_icon from './multiarrow_icon.png';
 import share_icon from './share_icon.png';
+import girl_with_phone from './girl_with_phone.png';
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -88,8 +89,28 @@ class Home extends Component {
 
 				<div className="sec-3-container">
 					<div className="row sec-3-row">
-						<div className="col-5 sec-3-col-left">hi</div>
-						<div className="col-7 sec-3-col-right">bye</div>
+						<div className="col-xl-5 col-lg-6 sec-3-col-left">
+						<img className="sec-3-img" src={girl_with_phone} alt="hahaa" />
+						</div>
+						<div className="col-xl-7 col-lg-6 sec-3-col-right">
+							<div className="sec-3-header-block">
+								<h1 className="sec-3-header">Simple To Use</h1>
+								<p className="sec-3-header-text">WonderPath only requires 3 straightforward steps</p>
+							</div>
+							<div className="step-block">
+								<p className="step-block-text">1) Enter your current/address location</p>
+							</div>
+
+							<div className="step-block">
+								<p className="step-block-text">2) Enter the distance you want your path to be</p>
+							</div>
+
+							<div className="step-block">
+								<p className="step-block-text">
+									3) Click the dropdown menu to choose the direction of your path{' '}
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
