@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './home.css';
 import '../../wonderpath_icon/style.css';
-import guy_with_map from './guy_with_map_2.png';
+import guy_with_map from './guy_with_map.png';
 import free_icon from './free_icon.png';
 import multiarrow_icon from './multiarrow_icon.png';
 import share_icon from './share_icon.png';

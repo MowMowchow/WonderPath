@@ -219,9 +219,9 @@
 }
 
 .sec-2-img {
-	width: 100%;
-	height: 100%;
-	margin-left: -45px;
+	width: 90%;
+	height: 90%;
+	margin-left: 15px;
 }
 
 .info-icon {
@@ -260,13 +260,13 @@
 	}
 	.sec-2-img {
 		width: 90%;
-		height: 90%;
+		height: auto;
 	}
 
 	.info-icon {
 		margin-left: calc(23px + 1vw);
-		width: 5vw;
-		height: 5vw;
+		width: 4.5vw;
+		height: 4.5vw;
 	}
 }
 
@@ -284,6 +284,11 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+	}
+	.sec-2-img {
+		margin-top: 50px;
+		width: 60%;
+		height: auto;
 	}
 }
 
