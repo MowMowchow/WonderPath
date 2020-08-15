@@ -201,7 +201,7 @@
 .info-block {
 	color: #12142c;
 	margin-bottom: 40px;
-	margin-left: 34px;
+	margin-left: calc(12px + 1.2vw);
 }
 
 .info-block-header {
@@ -228,7 +228,7 @@
 }
 
 .info-icon {
-	margin-left: calc(23px + 1vw);
+	margin-left: calc(6px + 1.2vw);
 	width: 43px;
 	height: 43px;
 }
@@ -249,7 +249,6 @@
 	}
 
 	.info-block {
-		margin-left: 80px;
 	}
 
 	.sec-2-img {
@@ -258,7 +257,7 @@
 	}
 
 	.info-icon {
-		margin-left: calc(23px + 1vw);
+		/* margin-left: calc(23px + 1vw); */
 		/* width: 4.5vw;
 		height: 4.5vw; */
 	}
