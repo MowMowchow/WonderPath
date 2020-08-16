@@ -7,6 +7,8 @@ import multiarrow_icon from './multiarrow_icon.png';
 import share_icon from './share_icon.png';
 import girl_with_phone from './girl_with_phone.png';
 
+// https://wonderpath.herokuapp.com
+const base_url = 'https://wonderpath.herokuapp.com'
 var ReactRotatingText = require('react-rotating-text');
 
 class Home extends Component {
@@ -112,6 +114,16 @@ class Home extends Component {
 							</div>
 						</div>
 					</div>
+
+					<div className="row try-now-btn-row">
+						<div className="col-12 try-now-btn-col">
+						{/* <Link to="/findpath"> */}
+						<a href={base_url+'/#/findpath'}><button type="button" className="btn try-now-btn">Try now!</button></a>
+						
+						{/* </Link> */}
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		);

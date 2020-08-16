@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
 import '../../wonderpath_icon/style.css';
-
+// https://wonderpath.herokuapp.com
 const base_url = 'https://wonderpath.herokuapp.com'
 class Nav extends Component {
 	constructor(props) {
 		super(props);
 		this.state = { urlloc: window.location.href };
-	  }
+
+	}
 
 	checkroute = (route) => {
 		this.setState({urlloc: route});
 	}
-
 	
 	render() {
 		
@@ -35,13 +35,13 @@ class Nav extends Component {
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<ul className="navbar-nav">
-						<Link to="/findpath"  onClick={() => this.checkroute('http://localhost:3000/#/findpath')}>
+						<Link to="/findpath"  onClick={() => this.checkroute(base_url+'/#/findpath')}>
 								<li className="nav-item nav-link">Find Path</li>
 						</Link>
-						<Link to="/about"  onClick={() => this.checkroute('http://localhost:3000/#/about')}>
+						<Link to="/about"  onClick={() => this.checkroute(base_url+'/#/about')}>
 								<li className="nav-item nav-link">About</li>
 						</Link>
-						<Link to="/signup"  onClick={() => this.checkroute('http://localhost:3000/#/signup')}>
+						<Link to="/signup"  onClick={() => this.checkroute(base_url+'/#/signup')}>
 								<li className="nav-item nav-link">Sign Up</li>
 						</Link>
 					</ul>

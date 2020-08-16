@@ -89,6 +89,19 @@
 });
     </script>
 
+    <script>
+      var $navbar = $("#mNavbar");
+      $(window).on('hashchange', function() {
+        console.log(window.location.href);
+        if (window.location.href === "http://localhost:3000/#/findpath") {
+          $navbar.removeClass("navbar-fixed-top");
+          $navbar.addClass("navbar-fixed-top");
+          $navbar.addClass("navbar-og");
+          window.location.reload();
+        }
+      });
+    </script>
+
     <!-- typing stuff -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>

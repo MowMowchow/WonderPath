@@ -302,7 +302,8 @@
 /* SECTION 3 */
 .sec-3-container {
 	height: 90vh;
-	margin-top: -200px;
+	/* margin-top: -50px; */
+	margin-top: calc(-250px + 8vw);
 	min-height: 850px;
 	display: flex;
 	flex-direction: column;
@@ -422,11 +423,48 @@
 		flex-direction: column;
 		justify-content: center;
 		height: 100%;
-		margin-top: -170px;
 	}
 
 	.sec-3-header-block {
 		color: #12142c;
 		margin-bottom: 4.5vh;
 	}
+}
+
+/* TRY NOW BTN */
+
+.try-now-btn-col {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    margin-top: 10px;
+    min-height: 100px;
+}
+
+.try-now-btn {
+    font-family: montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #F13031;
+    color: white;
+    border-radius:50px;
+    width: 70%;
+    height: 100%;
+    transition: .2s;
+    margin: auto;
+    min-height: 60px;
+    min-width: 256px;
+}
+
+.try-now-btn:hover{
+    font-family: montserrat;
+    font-weight: 600;
+    transform: scale(1.06);
+    transition: 0.33s; 
+    color: white;
+}
+
+.try-now-btn:focus, .try-now-btn:active {
+    outline: none;
+    box-shadow: none;
 }

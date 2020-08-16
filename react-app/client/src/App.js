@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
     <div>
-      <Nav />
+      <Nav/>
       <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/ref" exact component={Home} />
