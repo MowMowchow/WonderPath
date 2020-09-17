@@ -1,0 +1,133 @@
+.saved-paths-row {
+	margin-top: 2vw;
+	height: 205px;
+	width: 820px;
+	border-radius: 17px;
+	box-shadow: 0 2.5px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.location-marker-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 0;
+	padding-left: 30px;
+}
+
+.location-marker-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.location-marker {
+	font-size: 100px;
+}
+
+.saved-path-info-col {
+	padding-right: 0;
+}
+
+.dist-time-row {
+	margin-top: 20px;
+}
+
+.dist-time-label {
+	font-family: montserrat;
+	font-size: 25px;
+	display: inline;
+	font-weight: 600;
+}
+
+.dist-time-txt {
+	font-family: montserrat;
+	font-size: 24px;
+}
+
+.org-row,
+.dest-row {
+	margin-top: 5px;
+}
+
+.org-label,
+.dest-label {
+	font-family: montserrat;
+	font-size: 24px;
+	display: inline;
+	font-weight: 600;
+}
+
+.org-txt,
+.dest-txt {
+	font-family: montserrat;
+	font-size: 23px;
+}
+
+.delete-btn-col {
+	padding-left: 0;
+}
+
+.delete-btn {
+	float: none;
+	margin-left: 0.3em;
+	margin-top: 0.2em;
+	padding: 0;
+	background-color: transparent;
+  border: 0;
+  font-size: 25px;
+}
+
+.delete-btn:focus {
+	outline: none !important;
+}
+
+@media (max-width: 900px) {
+	.saved-paths-row {
+		height: 205px;
+		width: 620px;
+	}
+
+	.dist-time-label {
+		font-size: 22px;
+	}
+
+	.dist-time-txt {
+		font-size: 21px;
+	}
+
+	.org-label,
+	.dest-label {
+		font-size: 21px;
+	}
+
+	.org-txt,
+	.dest-txt {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 670px) {
+	.saved-paths-row {
+		height: 205px;
+		width: 480px;
+	}
+
+	.location-marker {
+		font-size: 80px;
+	}
+
+	.org-row,
+	.dest-row {
+		margin-top: 2px;
+	}
+
+	.org-label,
+	.dest-label {
+		font-size: 19px;
+	}
+
+	.org-txt,
+	.dest-txt {
+		font-size: 18px;
+	}
+}

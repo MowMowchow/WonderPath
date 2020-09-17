@@ -93,3 +93,11 @@
     text-decoration: none;
     color: #FFFFFF !important;
 }
+
+.bye {
+    display: none;
+}
+
+.profile-nav-tab {
+    margin-left: -2vw;
+}

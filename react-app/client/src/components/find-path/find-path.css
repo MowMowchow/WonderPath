@@ -69,7 +69,7 @@
     transition: .2s;
     margin: auto;
     min-height: 47px;
-    min-width: 232px;
+    min-width: 150px;
 }
 
 .narrow-btn:hover{
@@ -81,6 +81,48 @@
 }
 
 .narrow-btn:focus, .narrow-btn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* NARROW BTN */
+.save-btn-col {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    margin-top: 10px;
+    min-height: 80px;
+}
+
+.save-btn-col {
+    margin-bottom: -8px;
+}
+
+.save-btn {
+    font-family: montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #2FC6B7;
+    color: white;
+    border-radius:30px;
+    width: 70%;
+    height: 100%;
+    transition: .2s;
+    margin: auto;
+    min-height: 47px;
+    min-width: 150px;
+}
+
+.save-btn:hover{
+    font-family: montserrat;
+    font-weight: 600;
+    transform: scale(1.06);
+    transition: 0.33s; 
+    color: white;
+}
+
+.save-btn:focus, .save-btn:active {
     outline: none;
     box-shadow: none;
 }
