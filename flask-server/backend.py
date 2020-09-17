@@ -13,6 +13,12 @@ def get_coor_addy(address):
     r = requests.get(endpoint).json()
     return r['results'][0]['geometry']['location']
 
+def reverse_geocode(lat, lng):
+    base_url = "https://maps.googleapis.com/maps/api/geocode/json?"
+    endpoint = f"{base_url}latlng={lat},{lng}&key={api_key}"
+    r = requests.get(endpoint).json()
+    # do something here with r
+    return r['results'][0]['formatted_address']
 
 def find_dest_coor(lat, lon, distance, bearing):
     brng = (bearing*math.pi)/180  # Bearing is 90 degrees converted to radians.
@@ -103,4 +109,6 @@ def do(address, dist):
     }
     
     return out_json
+
+
 
