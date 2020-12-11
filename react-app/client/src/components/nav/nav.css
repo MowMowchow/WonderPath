@@ -88,7 +88,7 @@
 }
 
 .navbar a:hover {
-    transform: scale(1.15);
+    transform: scale(1.12);
     transition: 0.33s;
     text-decoration: none;
     color: #FFFFFF !important;

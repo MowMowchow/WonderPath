@@ -1,6 +1,7 @@
 .saved-paths-row {
 	margin-top: 2vw;
-	height: 205px;
+	/* height: 205px; */
+	height: auto;
 	width: 820px;
 	border-radius: 17px;
 	box-shadow: 0 2.5px 6px 0 rgba(0, 0, 0, .2);
@@ -12,6 +13,8 @@
 	justify-content: center;
 	padding-right: 0;
 	padding-left: 30px;
+	align-items: center;
+
 }
 
 .location-marker-container {
@@ -23,6 +26,20 @@
 .location-marker {
 	font-size: 100px;
 }
+
+.view-path-btn {
+	font-family: montserrat;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: transparent;
+	color: #14142C;
+	border: none;
+	margin: 0px;
+	margin-top: 7px;
+	width: 30%;
+	margin-left: -5px;
+}
+
 
 .saved-path-info-col {
 	padding-right: 0;
@@ -74,7 +91,8 @@
 	padding: 0;
 	background-color: transparent;
   border: 0;
-  font-size: 25px;
+	font-size: 25px;
+	z-index: 1000;
 }
 
 .delete-btn:focus {
@@ -83,7 +101,8 @@
 
 @media (max-width: 900px) {
 	.saved-paths-row {
-		height: 205px;
+		/* height: 205px; */
+		height: auto;
 		width: 620px;
 	}
 
@@ -104,11 +123,16 @@
 	.dest-txt {
 		font-size: 20px;
 	}
+
+	.view-path-btn {
+		margin-left: -15px;
+	}
 }
 
 @media (max-width: 670px) {
 	.saved-paths-row {
-		height: 205px;
+		/* height: 205px; */
+		height: auto;
 		width: 480px;
 	}
 
@@ -130,4 +154,13 @@
 	.dest-txt {
 		font-size: 18px;
 	}
+
+	.view-path-btn {
+		margin-left: -25px;
+	}
 }
+
+
+
+
+

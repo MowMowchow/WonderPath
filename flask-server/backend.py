@@ -112,3 +112,23 @@ def do(address, dist):
 
 
 
+def do2(address, destintation):
+    
+    leg_there = get_legs(address['lat'], address['lng'], destintation['lat'], destintation['lng'])
+    leg_back = get_legs(destintation['lat'], destintation['lng'], address['lat'], address['lng'])
+    instruc_there = get_instruc(leg_there)
+    instruc_back = get_instruc(leg_back)
+    dist_time_there = get_dist_gm(address['lat'], address['lng'], destintation['lat'], destintation['lng'])
+    out_json = {
+        'instruc_there': instruc_there,
+        'instruc_back': instruc_back,
+        'distance': dist_time_there[0],
+        'time': dist_time_there[1],
+        'curr_address': {'lat': address['lat'], 'lng': address['lng']},
+        'dest_address': {'lat':destintation['lat'],'lng':destintation['lat']},
+    }
+    
+    return out_json
+
+
+

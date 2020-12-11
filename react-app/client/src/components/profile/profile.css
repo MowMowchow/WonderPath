@@ -13,7 +13,7 @@
 
 .profile-row {
 	margin-top: 70px;
-	height: 205px;
+	height: 245px;
 	width: 820px;
 	border-radius: 17px;
 	box-shadow: 0 2.5px 6px 0 rgba(0, 0, 0, .2);
@@ -32,15 +32,39 @@
 }
 
 .profile-pic {
-  border-radius: 50%;
-  margin-left: -10px;
-
-}
-
-.profile-pic {
 	width: 53%;
 	height: auto;
+  border-radius: 50%;
+	margin-left: -10px;
+	width: 181px;
+	height: 181px;
+	overflow: hidden;
+
 }
+
+.profile-pic-edit{
+	margin-top: 10px;
+	text-align: center;
+}
+
+#change-profile-pic-btn{
+	display: none;
+}
+.change-profile-pic-label {
+	font-family: montserrat;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: transparent;
+	color: #14142C;
+	margin: auto;
+	margin-left: -10px;
+
+}
+
+.change-profile-pic-label:hover {
+	cursor: pointer;
+}
+
 
 .profile-info-col {
 	display: flex;
@@ -72,13 +96,13 @@
 
 @media (max-width: 900px) {
 	.profile-pic {
-		width: 53%;
-		height: auto;
+		width: 181px;
+		height: 181px;
 		margin-left: -20px;
 	}
 
 	.profile-row {
-		height: 205px;
+		height: 245px;
 		width: 620px;
 	}
 
@@ -105,13 +129,17 @@
 
 @media (max-width: 670px) {
 	.profile-pic {
-		width: 53%;
-		height: auto;
+		width: 106px;
+		height: 106px;
 		margin-left: -20px;
 	}
 
+	.change-profile-pic-label {
+		font-size: 12px;
+		margin-left: -15px;
+	}
 	.profile-row {
-		height: 205px;
+		height: 245px;
 		width: 480px;
 	}
 
@@ -154,3 +182,5 @@
   justify-content: space-evenly;
 }
 
+
+/* Modal section */

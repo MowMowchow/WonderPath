@@ -18,6 +18,8 @@ const SignUp = ({ history }) => {
 				var temp = {
 					username: username.value,
 					email: email.value,
+					profile_photo_url: '',
+					profile_photo_id: '',
 					savedpaths: []
 				};
 				console.log(temp);

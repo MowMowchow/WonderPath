@@ -8,7 +8,8 @@ import share_icon from './share_icon.png';
 import girl_with_phone from './girl_with_phone.png';
 
 // https://wonderpath.herokuapp.com
-const base_url = 'https://wonderpath.herokuapp.com'
+// http://localhost:3000
+const base_url = 'https://wonderpath-server.herokuapp.com'
 var ReactRotatingText = require('react-rotating-text');
 
 class Home extends Component {

@@ -99,7 +99,9 @@
       var $navbar = $("#mNavbar");
       $(window).on('hashchange', function() {
         console.log(window.location.href);
-        if (window.location.href === "https://wonderpath.herokuapp.com/#/findpath") {
+        // https://wonderpath.herokuapp.com
+        // http://localhost:3000
+        if (window.location.href === "https://wonderpath-server.herokuapp.com/#/findpath") {
           $navbar.removeClass("navbar-fixed-top");
           $navbar.addClass("navbar-fixed-top");
           $navbar.addClass("navbar-og");

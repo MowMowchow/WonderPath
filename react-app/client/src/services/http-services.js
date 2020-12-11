@@ -38,6 +38,22 @@ class HttpServiceClass extends Component {
         return promise;
     }
 
+    get_instruc3 = (inp_json) => {
+        var promise = new Promise((resolve, reject) => {
+            fetch(url+"/get-steps-modal", {
+                method: 'POST',
+			    headers: {
+				'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(inp_json)
+
+            }).then((res) => {
+                resolve(res.json());
+            });
+        });
+        return promise;
+    }
+
     send_user_info = (inp_json) => {
         var promise = new Promise((resolve, reject) => {
             fetch(url+"/sui", { // Send User Info
@@ -103,6 +119,21 @@ class HttpServiceClass extends Component {
         return promise;
     }
 
+    save_profile_photo_link = (inp_json) => {
+        var promise = new Promise((resolve, reject) => {
+            fetch(url+"/savephotourl", { // Send User Info
+                method: 'POST',
+			    headers: {
+				'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(inp_json)
+
+            }).then((res) => {
+                resolve(res.json());
+            });
+        });
+        return promise;
+    }
 }
 
 export default HttpServiceClass;

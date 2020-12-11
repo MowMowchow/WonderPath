@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, make_response #session
 import requests, json, math
 from backend import do
+from backend import do2
 from backend import reverse_geocode
 from flask_cors import CORS, cross_origin
 app = Flask(__name__)
@@ -26,7 +27,6 @@ def _corsify_actual_response(response):
     response.headers.add("Access-Control-Allow-Origin", "*")
     return response
 
-
 # routes -> general
 @app.route("/", methods=['GET', 'POST'])
 def send_data():
@@ -42,6 +42,16 @@ def get_steps():
     loc = dat["curr_location"]
     dist = float(dat["curr_distance"])
     out_json = do(loc, dist)
+    return _corsify_actual_response(jsonify(out_json))
+
+@app.route("/get-steps-modal", methods=['GET', 'POST'])
+def get_steps_modal():
+    dat = request.get_json(silent=True)
+
+    # both are lat and lngs
+    loc1 = dat["curr_location"]
+    loc2 = dat["curr_destination"]
+    out_json = do2(loc1, loc2)
     return _corsify_actual_response(jsonify(out_json))
 
 
@@ -82,6 +92,15 @@ def delete_path():
 
     return _corsify_actual_response(jsonify(out_json))
 
+
+@app.route("/savephotourl", methods=['GET', 'POST', 'PUT'])
+def save_photo():
+    dat = request.get_json(silent=True)
+    users.update_one({'email': dat['email']}, {'$set': { 'profile_photo_url': dat['profile_photo_url']}})
+    users.update_one({'email': dat['email']}, {'$set': { 'profile_photo_id': dat['profile_photo_id']}})
+    out_json = users.find_one({'email': dat['email']})
+    del out_json['_id']
+    return _corsify_actual_response(jsonify(out_json))
 
 
 

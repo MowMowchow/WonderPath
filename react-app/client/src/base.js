@@ -1,5 +1,6 @@
 import * as firebase from 'firebase';
 import 'firebase/auth';
+import 'firebase/storage';
 
 const fapp = firebase.initializeApp({
 	apiKey: 'AIzaSyA9PUuRLktQLtQh8R0-mNJ_aiY61qcdK5Q',
@@ -12,4 +13,6 @@ const fapp = firebase.initializeApp({
 	measurementId: 'G-T151H7V0MB'
 });
 
-export default fapp;
+const storage = firebase.storage();
+
+export {storage, fapp as default};
