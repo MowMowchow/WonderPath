@@ -7,7 +7,7 @@ import fapp from "./../../base";
 
 // https://wonderpath.herokuapp.com
 // http://localhost:3000
-const base_url = 'https://wonderpath-server.herokuapp.com';
+const base_url = 'https://wonderpath.herokuapp.com';
 class Nav extends Component {
 	constructor(props) {
 		super(props);
