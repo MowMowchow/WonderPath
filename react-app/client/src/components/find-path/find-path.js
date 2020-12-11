@@ -156,12 +156,12 @@ class FindPath extends Component {
 						<div className="row">
 							{' '}
 							{/*narrow button */}
-							<div className="col-6 narrow-btn-col">
+							{/* <div className="col-6 narrow-btn-col">
 								<button type="button" className="btn narrow-btn" onClick={this.narrow}>
 									Narrow
 								</button>
-							</div>
-							<div className="col-6 save-btn-col">
+							</div> */}
+							<div className="col-12 save-btn-col">
 								<button type="button" className="btn save-btn" onClick={this.save_path}>
 									Save Path
 								</button>
