@@ -53,13 +53,13 @@ class Nav extends Component {
 				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<ul className="navbar-nav">
 						<Link to="/findpath" onClick={() => this.checkroute(base_url + '/#/findpath')}>
-							<li className={this.props.loggedin || this.props.loggedout ? "nav-item nav-link" : "nav-item nav-link bye"}>Find Path</li>
+							<li className={this.props.loggedout ? "nav-item nav-link find-path-login-space" : "nav-item nav-link"}>Find Path</li>
 						</Link>
-						<Link to="/about" onClick={() => this.checkroute(base_url + '/#/about')}>
+						{/* <Link to="/about" onClick={() => this.checkroute(base_url + '/#/about')}>
 							<li className={this.props.loggedin || this.props.loggedout ? "nav-item nav-link" : "nav-item nav-link bye"}>About</li>
-						</Link>
+						</Link> */}
 						<Link to="/login" onClick={() => this.checkroute(base_url + '/#/login')}>
-							<li className={this.props.loggedout ? "nav-item nav-link" : "nav-item nav-link bye"}>Login</li>
+							<li className={this.props.loggedout ? "nav-item nav-link login-space" : "nav-item nav-link bye"}>Login</li>
 						</Link>
 
 						<Link to="/profile" onClick={() => this.checkroute(base_url + '/#/profile')}>
