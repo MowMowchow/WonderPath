@@ -1,5 +1,5 @@
 import requests, json, math
-api_key = "AIzaSyBTcJcpE8loo8Hmel4kVw5hXa8VOv2FLoo"
+api_key = "AIzaSyB4kJ6nBlKfHG1aZg7x7x_ZvIIhGvvSqck"
 
 def get_coor(): # is not precise
     base_url = "https://www.googleapis.com/geolocation/v1/geolocate?key="
