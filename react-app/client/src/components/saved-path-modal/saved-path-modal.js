@@ -85,7 +85,7 @@ class Modal extends Component {
 			var MapLoader = withScriptjs(Map);
 			return (
 				<MapLoader
-					googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTcJcpE8loo8Hmel4kVw5hXa8VOv2FLoo"
+					googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4kJ6nBlKfHG1aZg7x7x_ZvIIhGvvSqck"
 					loadingElement={<div style={{ height: `100%` }}/>}
 				/>
 			);
