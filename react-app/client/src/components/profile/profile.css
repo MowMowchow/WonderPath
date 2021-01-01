@@ -9,6 +9,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .profile-row {
@@ -94,7 +95,28 @@
   margin-bottom: 32px;
 }
 
-@media (max-width: 900px) {
+
+@media only screen and (max-width: 1100px) {
+	.profile-row{
+		/* height: 205px; */
+		height: auto;
+		width: 700px;
+	}
+
+	.user-email-label {
+    font-size: 20px;
+	}
+	
+	.profile-info {
+		font-size: 19px;
+	}
+	
+	.change-profile-pic-label{
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
 	.profile-pic {
 		width: 181px;
 		height: 181px;
@@ -103,7 +125,7 @@
 
 	.profile-row {
 		height: 245px;
-		width: 620px;
+		width: 500px;
 	}
 
 	.profile-info-col {
@@ -111,23 +133,23 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: 0;
-		margin-left: -37px;
+		margin-left: -10px;
   }
   
   .user-email-label {
-    font-size: 22px;
+    font-size: 19px;
   }
 
 	.profile-info {
-		font-size: 21px;
+		font-size: 18px;
   }
   
   .profile-user {
     margin-bottom: 20px;
-  }
+	}
 }
 
-@media (max-width: 670px) {
+@media only screen and (max-width: 670px) {
 	.profile-pic {
 		width: 106px;
 		height: 106px;
@@ -140,7 +162,7 @@
 	}
 	.profile-row {
 		height: 245px;
-		width: 480px;
+		width: 350px;
 	}
 
 	.profile-info-col {
@@ -148,12 +170,20 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: 0;
-		margin-left: -37px;
+		margin-left: -5px;
   }
   
 
   .profile-user {
     margin-bottom: 5px;
+	}
+	  
+  .user-email-label {
+    font-size: 14px;
+  }
+
+	.profile-info {
+		font-size: 13px;
   }
 }
 
@@ -179,8 +209,29 @@
 .saved-paths-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 
 /* Modal section */
+
+@media only screen and (max-width: 1100px) {
+	.saved-paths-header {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.saved-paths-header {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 670px) {
+	.saved-paths-header {
+		font-size: 25px;
+	}
+}

@@ -99,29 +99,38 @@
 	outline: none !important;
 }
 
-@media (max-width: 900px) {
+
+@media only screen and (max-width: 1100px) {
 	.saved-paths-row {
 		/* height: 205px; */
 		height: auto;
-		width: 620px;
+		width: 700px;
+	}
+
+}
+@media only screen and (max-width: 900px) {
+	.saved-paths-row {
+		/* height: 205px; */
+		height: auto;
+		width: 500px;
 	}
 
 	.dist-time-label {
-		font-size: 22px;
+		font-size: 19px;
 	}
 
 	.dist-time-txt {
-		font-size: 21px;
+		font-size: 18px;
 	}
 
 	.org-label,
 	.dest-label {
-		font-size: 21px;
+		font-size: 18px;
 	}
 
 	.org-txt,
 	.dest-txt {
-		font-size: 20px;
+		font-size: 17px;
 	}
 
 	.view-path-btn {
@@ -129,11 +138,11 @@
 	}
 }
 
-@media (max-width: 670px) {
+@media only screen and (max-width: 670px) {
 	.saved-paths-row {
 		/* height: 205px; */
 		height: auto;
-		width: 480px;
+		width: 350px;
 	}
 
 	.location-marker {
@@ -145,14 +154,23 @@
 		margin-top: 2px;
 	}
 
+	
+	.dist-time-label {
+		font-size: 17px;
+	}
+
+	.dist-time-txt {
+		font-size: 16px;
+	}
+
 	.org-label,
 	.dest-label {
-		font-size: 19px;
+		font-size: 14px;
 	}
 
 	.org-txt,
 	.dest-txt {
-		font-size: 18px;
+		font-size: 13px;
 	}
 
 	.view-path-btn {
