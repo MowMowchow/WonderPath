@@ -2,6 +2,13 @@
 
 WonderPath is a unique and easy to use path generation service. @ https://wonderpath.herokuapp.com/#/
 
+~ Info ~
+
+- The path generation script was done using Python.
+- I created a (Python) Flask REST API server to handle requests from the frontend
+- User Authentication handled with Firebase, and MongoDB was used to store the saved paths
+- The rest of the site/user interface was built using React
+
 The idea for the project came out of my love for running and the boredom that spawned from running the same 5km and 8km loops 3 times a week for over 4 years. 
 
 Users may enter their current location and the desired distance to receive a route for walking, biking, or any other activities. An example is provided below. 
@@ -19,13 +26,6 @@ The path generation can be broken into three steps:
 
 Users may create an account and save their own paths as well.
 ![WonderPath Profile Example](https://i.imgur.com/xmsZEdT.png)
-
-~ Info ~
-
-- The path generation script was done using Python.
-- I created a (Python) Flask REST API server to handle requests from the frontend
-- User Authentication handled with Firebase, and MongoDB was used to store the saved paths
-- The rest of the site/user interface was built using React
 
 ~ Other screenshots of the site ~
 
