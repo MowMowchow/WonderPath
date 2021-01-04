@@ -1,6 +1,6 @@
 # WonderPath
 
- WonderPath is a unique and easy to use path generation service. @ https://wonderpath.herokuapp.com/#/
+WonderPath is a unique and easy to use path generation service. @ https://wonderpath.herokuapp.com/#/
 
 The idea for the project came out of my love for running and the boredom that spawned from running the same 5km and 8km loops 3 times a week for over 4 years. 
 
@@ -13,9 +13,9 @@ The path generation can be broken into three steps:
 2) Using a rearrangement of the Haversine formula to find a corresponding pair of points such that the distance between the pair entered and the new pair is the desired distance.
 3) Using the Google Maps API to find directions between the two points.
 
-Notes:
-I could not find an equation online to perform step 2 (described above) and thus had to rearrange the (Haversine) formula myself.
-As the equation uses the direct distance to calculate the new pair of points, it does not account for buildings/structures in the way and roads. Therefore, larger distances may yield routes longer than expected. I plan to fix this issue by binary searching from the route distance given back from the Google Maps API call. 
+~ Notes ~
+- I could not find an equation online to perform step 2 (described above) and thus had to rearrange the (Haversine) formula myself.
+- As the equation uses the direct distance to calculate the new pair of points, it does not account for buildings/structures in the way and roads. Therefore, larger distances may yield routes longer than expected. I plan to fix this issue by binary searching from the route distance given back from the Google Maps API call. 
 
 Users may create an account and save their own paths as well.
 ![WonderPath Profile Example](https://i.imgur.com/xmsZEdT.png)
