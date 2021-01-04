@@ -12,6 +12,7 @@ The path generation can be broken into three steps:
 1) Obtaining the user's current location (which is then converted into a longitude & latitude pair).
 2) Using a rearrangement of the Haversine formula to find a corresponding pair of points such that the distance between the pair entered and the new pair is the desired distance.
 3) Using the Google Maps API to find directions between the two points.
+
 Notes:
 I could not find an equation online to perform step 2 (described above) and thus had to rearrange the (Haversine) formula myself.
 As the equation uses the direct distance to calculate the new pair of points, it does not account for buildings/structures in the way and roads. Therefore, larger distances may yield routes longer than expected. I plan to fix this issue by binary searching from the route distance given back from the Google Maps API call. 
