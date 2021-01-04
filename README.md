@@ -1,6 +1,6 @@
 # WonderPath
 
- WonderPath is a unique and easy to use path generation service.
+ WonderPath is a unique and easy to use path generation service. @ https://wonderpath.herokuapp.com/#/
 
 The idea for the project came out of my love for running and the boredom that spawned from running the same 5km and 8km loops 3 times a week for over 4 years. 
 
