@@ -1,5 +1,7 @@
 # WonderPath
 
+### **NOTE: Path generation is down as my google cloud subscription has ended and I do not have the money to renew it ;-;
+
 WonderPath is a unique and easy to use path generation service. @ https://wonderpath.herokuapp.com/#/
 
 ~ Info ~
