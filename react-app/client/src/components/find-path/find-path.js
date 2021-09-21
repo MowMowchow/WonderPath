@@ -78,7 +78,7 @@ class FindPath extends Component {
 		var MapLoader = withScriptjs(Map);
 		return (
 			<MapLoader
-				googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4kJ6nBlKfHG1aZg7x7x_ZvIIhGvvSqck"
+				googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKLHPlzvh5J-4sJgnvRmYi7OXryBAyK6w"
 				loadingElement={<div style={{ height: `100%` }} />}
 			/>
 		);
