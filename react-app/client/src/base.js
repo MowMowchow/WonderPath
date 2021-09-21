@@ -3,7 +3,7 @@ import 'firebase/auth';
 import 'firebase/storage';
 
 const fapp = firebase.initializeApp({
-	apiKey: 'AIzaSyA9PUuRLktQLtQh8R0-mNJ_aiY61qcdK5Q',
+	apiKey: 'AIzaSyDKLHPlzvh5J-4sJgnvRmYi7OXryBAyK6w',
 	authDomain: 'wonderpath-7d415.firebaseapp.com',
 	databaseURL: 'https://wonderpath-7d415.firebaseio.com',
 	projectId: 'wonderpath-7d415',
